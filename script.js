@@ -1,4 +1,4 @@
-// Loading Screen
+
 window.addEventListener("load", () => {
     setTimeout(() => {
       document.getElementById("loadingScreen").style.opacity = "0"
@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
     }, 2000)
   })
   
-  // Navigation
+
   window.addEventListener("scroll", () => {
     const nav = document.getElementById("nav")
     if (window.scrollY > 100) {
@@ -17,8 +17,7 @@ window.addEventListener("load", () => {
       nav.classList.remove("visible")
     }
   })
-  
-  // Love Counter
+
   function updateLoveCounter() {
     const startDate = new Date("2024-01-10") // Substitua pela data do primeiro encontro
     const today = new Date()
@@ -30,7 +29,7 @@ window.addEventListener("load", () => {
   
   updateLoveCounter()
   
-  // Floating Elements
+
   function createFloatingElement() {
     const container = document.getElementById("floatingElements")
     const element = document.createElement("div")
@@ -51,7 +50,7 @@ window.addEventListener("load", () => {
   
   setInterval(createFloatingElement, 2000)
   
-  // Intersection Observer for animations
+ 
   const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -65,12 +64,11 @@ window.addEventListener("load", () => {
     })
   }, observerOptions)
   
-  // Observe timeline items
+
   document.querySelectorAll(".timeline-item").forEach((item) => {
     observer.observe(item)
   })
-  
-  // Smooth scrolling for navigation links
+
   document.querySelectorAll(".nav-link").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault()
@@ -86,17 +84,17 @@ window.addEventListener("load", () => {
     })
   })
   
-  // Gallery lightbox effect (simple version)
+ 
   document.querySelectorAll(".gallery-item").forEach((item) => {
     item.addEventListener("click", () => {
-      // Aqui você pode adicionar um lightbox mais elaborado
+      
       const img = item.querySelector("img")
       const overlay = item.querySelector(".gallery-text")
-      alert(overlay.textContent) // Substitua por um modal mais bonito
+      alert(overlay.textContent) 
     })
   })
   
-  // Parallax effect for hero section
+  
   window.addEventListener("scroll", () => {
     const scrolled = window.pageYOffset
     const hero = document.querySelector(".hero")
@@ -107,7 +105,7 @@ window.addEventListener("load", () => {
     }
   })
   
-  // Add some interactive effects
+
   document.querySelectorAll(".promise-card, .letter, .gallery-item").forEach((card) => {
     card.addEventListener("mouseenter", () => {
       card.style.transform = "translateY(-10px) scale(1.02)"
@@ -118,7 +116,7 @@ window.addEventListener("load", () => {
     })
   })
   
-  // Easter egg: click on hearts
+
   let heartClickCount = 0
   document.addEventListener("click", (e) => {
     if (
